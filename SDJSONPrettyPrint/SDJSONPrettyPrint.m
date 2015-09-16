@@ -67,7 +67,7 @@ static NSString* SDJSONNumberTranslation(NSNumber* number)
         case 'S': case 'L': case 'Q':
             return [NSString stringWithFormat: @"%@", number];
         case 'f': case 'd': default:
-            return [NSString stringWithFormat: @"%.17g", number.doubleValue];
+            return [NSString stringWithFormat: @"%.2f", number.doubleValue];
     }
     
     return nil;
